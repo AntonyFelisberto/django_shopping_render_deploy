@@ -143,8 +143,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
-MEDIA_URL = "/images/"
+STATIC_URL = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = os.path.join(BASE_DIR, 'images')
 
 STATICFILES_DIRS = [
     BASE_DIR / "static"
