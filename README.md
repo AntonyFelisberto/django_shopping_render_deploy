@@ -28,4 +28,5 @@ PARA DEPLOY
     cd backend\venv\Scripts
     source activate
     export DATABASE_URL=SUA_DATABASE_URL_CONECTION
+    python manage.py createsuperuser
     python manage.py migrate
