@@ -21,7 +21,7 @@ SECRET_KEY = 'django-insecure-$2be8f0e78%s6t2ybq7(51&9kvzhp2(fk@&6@%e@cgtqvszw&t
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["django-shopping-1.onrender.com","localhost:10000","localhost:10012"]
+ALLOWED_HOSTS = ["django-shopping-1.onrender.com"]
 
 
 # Application definition
@@ -100,7 +100,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS':  [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,8 +143,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = "static/"
 MEDIA_URL =  'images/'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
     BASE_DIR / "static"
